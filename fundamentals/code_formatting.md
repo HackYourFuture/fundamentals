@@ -11,7 +11,7 @@ Starting with the latter, the JavaScript engine does not care about code formatt
 const o=[6,3,10,1].reduce((o,c)=>(o.push(c*c),o),[]);console.log(o);
 ```
 
-Clearly, the above code is incomprehensible to humans. The original code is shown below, nicely formatted for the benefit of human readers. 
+Clearly, the above code is incomprehensible to humans. The original code is shown below, nicely formatted for the benefit of human readers.
 
 ```js
 const arr = [6, 3, 10, 1];
@@ -38,9 +38,9 @@ Curly braces are used to start and end code blocks, often as part of an `if`, `s
 
 ```js
 if (condition) {
-  // ... 
+  // ...
 } else {
-  // ... 
+  // ...
 }
 ```
 
@@ -51,9 +51,9 @@ Code blocks inside curly braces should be indented by 2 or 4 spaces (choose one 
 ```js
 function myFunction() {
   if (condition) {
-    // ... 
+    // ...
   } else {
-    // ... 
+    // ...
   }
 }
 ```
@@ -66,7 +66,7 @@ function myFunction() {
 
 ## Use VSCode for well-formatted JavaScript
 
-Rather than continuing and specifying every little detail on how to format JavaScript code in a standard format, we can call in the help of VSCode. 
+Rather than continuing and specifying every little detail on how to format JavaScript code in a standard format, we can call in the help of VSCode.
 
 VSCode comes with a built-in code formatter for JavaScript. To format the current document in a standard fashion, press the following key combination:
 
@@ -77,13 +77,13 @@ VSCode comes with a built-in code formatter for JavaScript. To format the curren
 Just make it a habit to bring this three-finger salute just before saving your document or whenever it becomes messy and you're good to go!
 
 > There are a number of user settings that you can apply in VSCode to enable auto-formatting as you type (or paste). See [VSCode Tips](../VSCodeTips/README.md#customise-vscode-settings) for further details.
-> 
+>
 
 ## ESLint
 
 [ESLint](https://eslint.org/) is a tool that can check your JavaScript code for common errors and bad practices. See [VSCode Tips](../VSCodeTips/README.md#installation-instructions) on how to set it up.
 
-ESLint is configured via user-definable rules that specify what to check. These rules must be defined in a file called `.eslintrc.json` placed in the root folder of your project repository. For the lectures and homework of the three HYF JavaScript modules it is recommended that you create an `.eslintrc.json` file and copy and paste the content shown below into that file. 
+ESLint is configured via user-definable rules that specify what to check. These rules must be defined in a file called `.eslintrc.json` placed in the root folder of your project repository. For the lectures and homework of the three HYF JavaScript modules it is recommended that you create an `.eslintrc.json` file and copy and paste the content shown below into that file.
 
 More information about ESLint Rules [here](https://eslint.org/docs/rules/).
 
@@ -98,6 +98,7 @@ Make sure that you correct any errors and warnings that ESLint produces before c
     "node": true
   },
   "parserOptions": {
+    "ecmaVersion": 2017,
     "ecmaFeatures": {
       "jsx": true
     },
