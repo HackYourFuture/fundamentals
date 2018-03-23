@@ -233,7 +233,7 @@ The `await` keyword causes the code execution to be suspended in a non-blocking 
 
 You can only use the `await` keyword in functions marked with the keyword `async`. The return value (if any) of that function is also a promise.
 
-Note that you must use a `try`-`catch` block to deal with errors.
+Note that you must use a `try`-`catch` block to deal with errors. Please refer to the [try...catch](./try_catch.md) fundamental for more information.
 
 More info on MDN:
 
