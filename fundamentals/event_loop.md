@@ -40,7 +40,7 @@ Figure 1 below depicts the call stack for a scenario where function **A**() call
 1. The JavaScript engine pushes **A**() on the call stack and starts its execution.
 2. Function **A**() calls function **B()**: the JavaScript engine suspends the execution of **A**() (taking note where it left off), pushes **B**() on the call stack and starts executing **B**().
 3. When function **B**() returns, the JavaScript engine pops **B**() off the stack. Since function **A**() is now again at the top the stack, the JavaScript engine resumes **A**() at the point where it left off.
-4. Finally, when function **A**() returns it is popped of the stack and with the call stack now empty, the JavaScript engine enters its event loop. 
+4. Finally, when function **A**() returns it is popped of the stack and with the call stack now empty, the JavaScript engine enters its event loop.
 
 ![Call Stack](assets/call-stack.png)
 
@@ -84,7 +84,6 @@ All output resulting from button clicks will be printed in the browser's console
 The JavaScript file `app.js` adds a `'click'` event listener for each of the three buttons. Rather than using anonymous functions for the event handlers, all functions are given a name so that these names show up in the call stack should we run this code in the Chrome debugger.
 
 ```js
-'use strict';
 'use strict';
 {
   function synTimeout(delay) {
@@ -133,7 +132,7 @@ The JavaScript file `app.js` adds a `'click'` event listener for each of the thr
 
 In Figure 2.1 below, when the **START SYNC TIMER** button is clicked ①, a `click` event with its `onSyncClick` event handler is placed in the Event Queue and, because the call stack is empty, is immediately executed. The `onSyncClick` function calls the `synTimeout` function, passing the desired time delay in milliseconds in the `delay` parameter. The call stack at this point in time is depicted in ②.
 
-The `synTimeout` function keeps racing around in a tight `while` loop, in each loop iteration calling `Date.now()` to check whether the specified delay has already been reached. While the JavaScript engine is busy executing this `while` loop, it cannot run any other code. In particular, it cannot pick up events from the Event Queue, for instance click events from the **HELLO** button, while the loop is executing ③. The `onHelloClick` event handler awaits execution in the Event Queue (with the browser appearing to be unresponsive) until the `synTimeout` function completes, and with it, the `onSyncClick` function (Figure 2.2, ④). 
+The `synTimeout` function keeps racing around in a tight `while` loop, in each loop iteration calling `Date.now()` to check whether the specified delay has already been reached. While the JavaScript engine is busy executing this `while` loop, it cannot run any other code. In particular, it cannot pick up events from the Event Queue, for instance click events from the **HELLO** button, while the loop is executing ③. The `onHelloClick` event handler awaits execution in the Event Queue (with the browser appearing to be unresponsive) until the `synTimeout` function completes, and with it, the `onSyncClick` function (Figure 2.2, ④).
 
 ![Event Loop 1](assets/event-loop-1.png)
 
@@ -143,7 +142,7 @@ At this point the call stack becomes empty, and the event loop can pick up `onHe
 
 Finally, when the `onHelloClick` event handler has finished execution, the call stack becomes empty again ⑥, and the event loop awaits further, future events.
 
-**In conclusion:** Synchronous, blocking code, such as implemented by 
+**In conclusion:** Synchronous, blocking code, such as implemented by
 the `synTimeout` function is to be avoided as it makes the application appear to be unresponsive.
 
 ![Event Loop 2](assets/event-loop-2.png)
@@ -152,7 +151,7 @@ Figure 2.2 The Event Loop - blocking code - continued.
 
 ## Asynchronous, non-blocking code
 
-In contrast, in Figure 3.1, when we click the **START ASYNC TIMER** button ①, the `onAsyncClick` event handler is placed and the Event Queue and, because the call stack is empty, is immediately executed ②. It in turn calls the `setTimeout` function provided by the browser (**not** the JavaScript engine!). This starts a timer internal to the browser ③. Once the timer has been set up the `setTimeout` function returns and subsequently the `onAsyncClick` event handler exits. 
+In contrast, in Figure 3.1, when we click the **START ASYNC TIMER** button ①, the `onAsyncClick` event handler is placed and the Event Queue and, because the call stack is empty, is immediately executed ②. It in turn calls the `setTimeout` function provided by the browser (**not** the JavaScript engine!). This starts a timer internal to the browser ③. Once the timer has been set up the `setTimeout` function returns and subsequently the `onAsyncClick` event handler exits.
 
 Suppose that one second later we click the **HELLO** button ④. This causes the `onHelloClick` event handler to be placed in the Event Queue. Because the call stack is empty the `onHelloClick` event handler is immediately executed ⑤ and subsequently exits.
 
