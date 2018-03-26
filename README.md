@@ -11,8 +11,8 @@
 |5.|• Functions + JSON/Arrays<br>• [Array Manipulations](fundamentals/array_manipulation.md)<br>• JSON<br>• [Map and filter](fundamentals/map_filter.md)<br>• Arrow functions |
 |6.|• [Closures](fundamentals/scope_closures_this.md) <br>• Callbacks|
 |7.|• Structure for a basic SPA (Single Page Application) <br>• [XMLHttpRequests](fundamentals/XMLHttpRequest.md) <br>• API calls|
-|8.|• Async vs Sync <br> • [Promises](fundamentals/promises.md)<br> • [Event Loop (order of execution)](fundamentals/event_loop.md)<br> • [try...catch](fundamentals/try_catch.md)|
-|9.|• [Object Oriented Programming and Classes](fundamentals/oop_classes.md)<br>• [The `this` keyword](fundamentals/this.md) |
+|8.|• [Event Loop (order of execution)](fundamentals/event_loop.md)<br>• [Promises](fundamentals/promises.md)<br> |
+|9.|• [try...catch](fundamentals/try_catch.md)<br>• [async/await](fundamentals/async_await.md)<br>• [Object Oriented Programming and Classes](fundamentals/oop_classes.md)<br>• [The `this` keyword](fundamentals/this.md) |
 
 
 
