@@ -18,7 +18,7 @@ When you throw an error, further execution of the current code stops immediately
 
 ## Exception handling with try...catch
 
-If you anticipate that your code may be subjected to exceptions (either because you throw exceptions yourself or exceptions thrown by Web API or library functions) you can handle exceptions by wrapping your code in a `try...catch` block.
+If you anticipate that your code may be subjected to exceptions (either because you throw exceptions yourself or exceptions thrown by Web API or library functions*) you can handle exceptions by wrapping your code in a `try...catch` block.
 
 Example: The `JSON.parse()` method may throw an exception if the string passed to `.parse()` is not valid JSON.
 
@@ -36,6 +36,8 @@ catch (err) {
 ```
 
 Note that the `catch` block receives the `Error` object that was thrown.
+
+\* Note: You should be able to find out whether exceptions are thrown in a Web API (e.g. `JSON.parse()`) or library functions by inspecting the corresponding documentation.
 
 ## try...catch with async and await
 
@@ -69,7 +71,6 @@ Examples of situations where an exception is appropriate are:
 
 - The network is unexpectedly down.
 - A database connection was dropped.
-- The battery of a mobile phone shuts down.
 
 And so on.
 
