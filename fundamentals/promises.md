@@ -149,12 +149,11 @@ Because `.then()` (and `.catch`) return new promises, you can chain them togethe
 function fetchAndRender() {
   fetchJSON(url)
     .then(data => {
-      const innerPromise = fetchJSON(otherUrl)
-        .then(otherData => {
-          renderData(data);
-          renderOtherData(otherData);
-        });
-      return innerPromise;
+      renderData(data);
+      return fetchJSON(otherUrl);
+    })
+    .then(otherData => {
+      renderOtherData(otherData);
     })
     .catch(err => {
       renderError(err);
@@ -168,11 +167,9 @@ Listing 2. Chaining of `then` and `catch`
 
 Let's examine Listing 2 in a bit more detail. There two calls to `fetchJSON()`. Errors are handled in one place, by means of the `.catch()` method that terminates the promise "chain".
 
-If you embed another promise inside the function that you pass to the `.then()` method you should return that promise as the function's return value. If you don't return the promise, there is no way for the `.catch()` at the end of the chain to "see" a `reject()` of the inner promise, leaving the rejection unhandled.
+If you embed another promise inside the function that you pass to the `.then()` method (in Listing 2 this is done in the first `.then()`) you should return that promise as the function's return value. If you don't return the promise, there is no way for the `.catch()` at the end of the chain to "see" a `reject()` of the inner promise, leaving the rejection unhandled.
 
-Note the expression assigned to the `innerPromise` variable. The `fetchJSON()` function returns a promise, but the `.then()` method chained to `fetchJSON()` also returns a promise (resolved to the value `undefined` because no value is returned). Therefore `innerPromise` is indeed a promise. In this case we are not interested in the value it resolves to (which is `undefined` as we saw), only in the fact that the promise is resolved (i.e. the async operation we were waiting for has been completed).
-
-In case a promise in the chain is rejected due to some error, the promise chain will be traversed until an `onRejected` handler (e.g., in a terminating `.catch()` method) is found. All intermediate `onFulfilled` handlers (e.g. `.then()`) will be skipped*.
+In case a promise in the chain is rejected due to some error, the promise chain will be traversed until an `onRejected` handler (e.g., in a terminating `.catch()` method) is found. All intermediate `onFulfilled` handlers (e.g. `.then()`) will be skipped.
 
 Handling errors at the end of a promise chain is a major advantage over the repetition of error handling code in the case of callbacks.
 
