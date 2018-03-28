@@ -146,7 +146,7 @@ It is important to understand that the `.then()` method returns a new promise th
 Because `.then()` (and `.catch`) return new promises, you can chain them together such that your code can be read as: do *this*, then do *that* and then *that*, etc.:
 
 ```js
-function fetchAndRender() {
+function fetchAndRender(url, otherUrl) {
   fetchJSON(url)
     .then(data => {
       renderData(data);
