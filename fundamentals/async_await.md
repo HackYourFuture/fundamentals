@@ -65,7 +65,7 @@ function fetchAndRender(url, otherUrl) {
 
 Listing 3. Running promises in parallel using Promise.all().
 
-The promises from the two calls to `fetchJSON()` now run in parallel. `Promise.all()` returns a new promise that is fulfilled if the array of promises passed as its argument are resolved or rejected as soon as any one of the promises is rejected. Its fulfilled value is an array of the fulfilled values of the individual promises, in the same order. Because the promises run in parallel the browser can send out two simultaneous XMLHttpRequests, improving overall performance.
+The promises from the two calls to `fetchJSON()` now run in parallel. `Promise.all()` returns a new promise that is resolved if all the promises passed in the array argument are resolved or is rejected as soon as any one of the promises is rejected. Its fulfilled value is an array of the fulfilled values of the individual promises, in the same order. Because the promises run in parallel the browser can send out two simultaneous XMLHttpRequests, thereby improving overall performance.
 
 
 ### The async/await alternative
