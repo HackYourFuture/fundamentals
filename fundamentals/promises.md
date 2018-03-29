@@ -26,7 +26,7 @@ We can state a number of simple facts about ES6 promises:
    - **pending**: the asynchronous result is still awaiting delivery
    - **fulfilled**: the asynchronous result has been delivered and is available (`resolve()` was called)
    - **rejected**: an error was encountered: the promise could not be fulfilled (`reject()` was called)
-- A promise that is no longer pending because it was either fulfilled to rejected is said to be _settled_.
+- A promise that is no longer pending because it was either fulfilled or rejected is said to be _settled_.
 - A promise that is _settled_ has reached its final state. Its state and value can no longer be changed. It has become _immutable_. Subsequently calling `resolve()` or `reject()` does no longer affect the outcome of the promise.
 
 ## Example code
