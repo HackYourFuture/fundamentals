@@ -62,6 +62,10 @@ When you have finished your homework and wish to hand it in, do so via a **pull 
 
 5. Press the green [**Create pull request**] button to continue.
 
+6. Add a title for your pull request, e.g. 'Homework Week 1'. You can optionally add comments for the pull request reviewer, e.g. known issues with your current homework.
+
+7. Finally, press the green [**Create pull request**] button to finish sending off the pull request.
+
 ## Resources
 
 Take a look at [this video](https://www.youtube.com/watch?v=-o0yomUVVpU)
