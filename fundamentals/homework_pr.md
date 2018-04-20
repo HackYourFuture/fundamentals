@@ -41,7 +41,7 @@ For each week's homework repeat the following steps.
     git commit -m "your commit message"
     ```
 
-    Make sure that your commit messages are meaningful and accurately describe what the commit is about. Messages such as `my changes` are not okay. If you need to go back in time to review a particular change from the past, the commit messages are the only clues available for finding the relevant commit. For an in-depth discussion on how to write good commit messages, see [How to Write a Git Commit Message](https://chris.beams.io/posts/git-commit/).
+    Make sure that your commit messages are meaningful and accurately describe what the commit is about. Messages such as `my changes` are not okay. If you need to go back in time to review a particular change from the past, the commit messages are the only clues to go by for finding the relevant commit. For an in-depth discussion on how to write good commit messages, see [How to Write a Git Commit Message](https://chris.beams.io/posts/git-commit/).
 
 6. Push your commits to GitHub. You don't need to do this after every individual commit, but pushing often to your own repository is advisable as a safeguard against disk failure on your laptop. The first time you push your new branch you must use the following command (replace `new-branch-name` with the name of your new branch, e.g. 'homework-week1'):
 
