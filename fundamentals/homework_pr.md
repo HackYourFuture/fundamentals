@@ -60,7 +60,7 @@ When you have finished your homework and wish to hand it in, do so via a **pull 
 
 4. Select the HackYourFuture repository master branch on the left side and your repository and homework branch on the right side.
 
-TO BE COMPLETED
+5. Press the green [**Create pull request**] button to continue.
 
 ## Resources
 
