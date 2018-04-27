@@ -51,7 +51,7 @@ function createApplication() {
     // adds middleware shared across all routes
   };
 
-  app.get = function get (path, ...middleWareFns) {
+  app.get = function get(path, ...middleWareFns) {
     // adds middleware for the GET method for a specific route
   }
 
@@ -74,7 +74,6 @@ const compression = require('compression');
 const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
 const serveStatic = require('serve-static');
-const auth = require('./auth/auth-service');
 
 const app = express();
 
