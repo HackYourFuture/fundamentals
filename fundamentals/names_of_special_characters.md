@@ -8,11 +8,11 @@ Do you think there is one (or more) missing? Make a PR with your additions 🙃!
 
 `(` Parentheses `)`
 
-`{` Braces, or curly braces `}`
+`{` Braces, or Curly brackets `}`
 
 `[` Brackets, or square brackets `]`
 
-`<` Angeled brackets `>`
+`<` Angle brackets `>`
 
 `'` Single quote `'` 
 
@@ -28,8 +28,6 @@ Do you think there is one (or more) missing? Make a PR with your additions 🙃!
 
 `;` Semicolon `;`
 
-`...` The spread operator, also called Ellipses
-
 `&` Ampersand `&`
 
 `*` Asterisk `*`
@@ -38,6 +36,10 @@ Do you think there is one (or more) missing? Make a PR with your additions 🙃!
 
 `|` Vertical bar `|`
 
-`~` Tilde or equivalency sign `~`
+`~` Tilde `~`
 
 `#` Hash or number sign `#`
+
+`_` Underscore `_`
+
+See also the fundamentals page on [Operators](operators.md).
