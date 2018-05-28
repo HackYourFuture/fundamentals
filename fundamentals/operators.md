@@ -2,8 +2,8 @@
 
 ## Comparison operators
 
->Note the two different uses of the equals sign:<br>
->A single equals sign (=) is used to assign a value to a variable.
+>Note the two different uses of the equals sign:  
+>A single equals sign (=) is used to assign a value to a variable.  
 A triple equals sign (===) is used to compare two values (see Equality Operators).
 
 ### Equality operators
