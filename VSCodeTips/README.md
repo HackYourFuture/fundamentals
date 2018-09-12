@@ -1,67 +1,82 @@
 # VSCode Tips
 
-Now that you're using VSCode here are some tips to use it effectively.
-
 ## Installation
 
 Download and install the appropriate version of VSCode for your operating system from the [VSCode web site](https://code.visualstudio.com/).
 
 ## Some useful extensions
 
-VSCode can be extended with _extensions_. There are two that we recommend you install from day 1.
+VSCode can be extended with _extensions_. There are three that we recommend you install from day 1.
 
 **Spell Checker**. We fully understand that you guys sometimes have difficulty with the correct English spelling when choosing names for variables and functions in your JavaScript programs. That is nothing to be ashamed of, but why not get some help from a handy extension?
 
 **ESLint**. This extension can check your JavaScript code for obvious errors, such as undefined variables, unused variables, etc.
 
+**Open in browser**. This extension is handy during the HYF JavaScript lessons. It allows you to quickly open an HTML file in the browser directly from VSCode.
+
 ### Installation instructions
 
 1. Start up VSCode.
 
-2. Press the last button in the area in left margin (called the Activity Bar), shown below:
-	<br />![extensions-btn](assets/27857540-5db15d4a-6172-11e7-953f-347c592b4e4f.png)
+2. Press the button in the area in the left margin (called the **Activity Bar**), as shown below:
+  
+    ![Extensions Icon](assets/extensions-icon.png)
 
-3. In the input field in the upper left corner, type `code spellchecker` as pictured here:
+3. In the input field in the upper left corner, type `spell checker` as pictured here:
 
-	![Figure 1. Spell checker extension](assets/27807986-f1f76762-6044-11e7-831d-dd2a6551f027.PNG)
+    ![Spell checker extension](assets/spell-checker.PNG)
 
 4. Press the green `install` button of **Code Spellchecker**.
-5. When the installation has finished, install the ESLint extension in a similar fashion:
 
-	![Figure 2. ESLint extension](assets/27807987-f1fa8406-6044-11e7-8284-b51cd1251921.PNG)
+5. Now type `open in browser` in the Search Extensions input field and press install:
 
-6. When this second extension has finished installing you will notice that the green `install` button changes to a blue `reload` button. But no need to press this button at this time (no harm done if you did).
-7. You now need to install a global Node package to support ESLint. Open a terminal window in VSCode by selecting **View**, **Integrated Terminal** from the menu bar.
-8. A terminal window opens in the lower half of the VSCode window. In this window, type the command below (on Linux and MacOS systems you may need to prefix this command with `sudo`, e.g. `sudo npm ...`):
+    ![Open in browser extension](assets/open-in-browser.png)
 
-	```
-	npm install -g eslint
-	```
+6. When the installation has finished, install the ESLint extension in a similar fashion:
 
+    ![Figure 2. ESLint extension](assets/eslint.png)
 
-9. Once the installation has finished close VSCode for now.
+7. When this final extension has finished installing you will notice that the green `install` button changes to a blue `reload` button. Press this button to reload VSCode and activate the newly installed extensions.
+8. You now need to install a global Node package to support ESLint. Open a terminal window in VSCode by selecting **View**, **Integrated Terminal** from the menu bar.
+9. A terminal window opens in the lower half of the VSCode window. In this window, type the command below (on Linux and MacOS systems you may need to prefix this command with `sudo`, e.g. `sudo npm ...`):
+
+    ```
+    npm install -g eslint
+    ```
 
 ## Customise VSCode Settings
 
-We recommend that you apply two changes to the default settings of VSCode to help you create well-formatted JavaScript code. Follow these steps:
+We recommend that you apply a couple of changes to the default settings of VSCode to help you create well-formatted JavaScript code. Follow these steps:
 
 1. Press the cog-wheel icon in the lower-left corner of the VSCode screen, as indicated here:
 
-	![settings-btn](assets/settings.png)
+    ![settings-btn](assets/settings.png)
+
+    >If you see a blue encircled number, e.g. 1, on this button this means that you have an outstanding VSCode update awaiting to be installed. VSCode currently has a monthly update cycle. It is best to install updates at your earliest convenience.
 
 2. From the menu, select **Settings**.
-3. In the `USER SETTINGS` tab in the right-hand half of the screen add the three lines indicated below between the curly braces:
 
-```json
-/// Place your settings in this file to overwrite the default settings
-{
-  "editor.formatOnType": true,
-  "editor.formatOnPaste": true,
-  "editor.formatOnSave": true
-}
-```
+3. From the settings panel, with the **User Settings** tab highlighted, click on the icon with three horizontal dots, as indicated by the red triangle in the figure below.
 
-4. Close the User Settings tab.
+    ![settings=panel](assets/settings-panel.png)
+
+4. From the resulting menu, select **Open settings.json**.
+
+5. Copy the content shown below and paste it over (i.e. replace) the existing content in the `USER SETTINGS` panel in the right-hand half of the screen.
+
+    ```json
+    /// Place your settings in this file to overwrite the default settings
+    {
+      "editor.detectIndentation": false,
+      "editor.formatOnPaste": false,
+      "editor.formatOnSave": true,
+      "editor.formatOnType": true,
+      "editor.tabSize": 2,
+      "files.autoSave": "onFocusChange"
+    }
+    ```
+
+6. Close the Settings tabs.
 
 ## Using VSCode for your homework
 
@@ -71,26 +86,44 @@ You’ll get the most out of VSCode if you organise your work in folders, say a 
 
 To start work with VSCode in particular folder, start VSCode and open the relevant folder: from the menu, select **File**, **Open Folder**. VSCode will now open this folder to be your "project folder", until you close VSCode or open another folder.
 
-Assuming that you will use the folder for JavaScript work, you need to create a special file inside of it as required by ESlint.
+>Make it a habit in VSCode to always open the **folder** that contains the project you are working on, rather than individual files in that folder.
 
-From the menu, select **View**, **Command Palette…** and type `create` as show in the picture below. Select: **Create** '.eslintrc.json' File.
+In the figure below the folder named `JavaScript2` was opened in VSCode. The directory tree for that folder in shown in the **Explorer** panel. The folder name `JAVASCRIPT2` is displayed in uppercase in the title bar of the directory tree panel.
 
-![Figure 3. Create '.eslintrc.json' File](assets/27809404-94afa762-604f-11e7-9d77-0d590bfccc19.png)
+![Open folder in VSCode](./assets/open-folder.png)
 
-The `.eslintrc.json` file will now be created in the project folder. No need to touch this file at this time, it just needs to sit in your project folder. Later in the course you may wish to add additional "rules" to this file for more stringent code checking.
 
 ## Creating your JavaScript file
 
 You are now ready to start adding your first JavaScript file.
 
-1. From the menu, select **File**, **New File**. This will create a new, empty file named "Untitled-1".
-2. Select **File**, **Save** from the menu and give your file a an appropriate name. Make sure that you give it an extension ".js" to make it a JavaScript file.
-3. Start entering your JavaScript code in the new file. Be on the watch out for green squirly underlines. These are warnings from either ESLint or the Spell Checker that something might be wrong.
-4. If you see green squirly underlines, hover your mouse pointer over the underlined text and a tooltip will appear that explains what might be wrong.
-5. You can also open the "problem" panel by selecting **View**, **Problems** from the menu to see any problems identified.
-6. Pay attention also to the lower left part of the VSCode window, i.e. the status bar. It gives an indication of the number of errors and warnings issued. In the picture below there are zero errors, 7 warnings (usually from ESLint) and 14 informational messages (usually from the spell checker).
+1. Open the folder where you will keep your working files, for instance `hyf-javascript1`.
+2. Right-click in an empty space in the `EXPLORER` window and select **New File** from the context menu. You will see the following:
 
-	![Figure 4. Error, warning and message indicators](assets/27809813-64ae6c98-6053-11e7-8b6c-2bec3400ccd3.PNG)
+    ![New file](./assets/new-file.png)
+
+3. Type a file name in the edit box, e.g. `app.js` and press **Enter**. This will add a file `apps.js` to your working folder and open an editor tab for the newly created file.
+
+    ![Edit file](./assets/edit-file.png)
+
+
+5. Start typing your JavaScript code in the new file. 
+
+    ![Hello world](./assets/hello-world.png)
+    
+6. You can also create subfolders in `EXPLORER` panel. Right-click in an empty space in the `EXPLORER` window and select **New Folder** from the context menu, for instance `week1`.
+
+    ![New folder](./assets/new-folder.png)
+
+7. To create a new file in the subfolder, right-click on the subfolder and type a file name in the input box.
+
+    ![New file in subfolder](./assets/new-file-in-folder.png)
+
+8. Be on the watch out for coloured wavy underlines in your code. These are warnings from either ESLint or the Spell Checker that something might be wrong. If you see such wavy underlines, hover your mouse pointer over the underlined text and a tooltip will appear that explains what might be wrong.
+9. You can also open the "problem" panel by selecting **View**, **Problems** from the menu to see any problems identified.
+10. Pay attention also to the lower left part of the VSCode window, i.e. the status bar. It gives an indication of the number of errors and warnings issued. In the picture below there are zero errors, 7 warnings (usually from ESLint) and 14 informational messages (usually from the spell checker).
+
+    ![Figure 4. Error, warning and message indicators](assets/status-bar.png)
 
 ## Some useful short-cut commands
 
@@ -108,22 +141,22 @@ Here are some short-cut commands that you will use many times a day and that we 
 
 - **Format Document**. This command reformats your JavaScript file in a generally accepted standard format, using proper indenting, proper use of spaces, placing of curly braces and more. A neatly formatted document helps you to better understand your own code and your teachers, mentors and fellow students will love your for it too when they review your work.
 
-	*With VSCode at your finger tips there is no longer any excuse for submitting poorly formatted homework!*
+  *With VSCode at your finger tips there is no longer any excuse for submitting poorly formatted homework!*
 
 - **Search**. Search for specified text.
 - **Replace**. Replace specified text by some other text.
 
-	In the figure below the **Replace** pop-up window is shown. The **Search** pop-up is similar, but with one input field only.
+    In the figure below the **Replace** pop-up window is shown. The **Search** pop-up is similar, but with one input field only.
 
-	![Figure 5. Search and Replace](assets/27810425-592063d4-605a-11e7-9e29-dfb02f1aed22.png)
+    ![Figure 5. Search and Replace](assets/search-and-replace.png)
 
-	- The `Aa` button activates the **Match Case** option.
-	- The `Ab|` button matches **Whole Words Only**.
-	- The `.*` button allow you to search using _regular expressions_, which you may encounter in later modules as an advanced JavaScript programming topic.
-	- The `c-b` button next to the second input field replaces the next occurrence of the matched text.
-	- The `ab-ac` button replaces **all** occurrences of the matched text.
-	- The left and right arrows move the cursor to the previous and next match.
-	- To get rid of the pop-up press `Esc` or press the `x` button.
+    - The `Aa` button activates the **Match Case** option.
+    - The `Ab|` button matches **Whole Words Only**.
+    - The `.*` button allow you to search using _regular expressions_, which you may encounter in later modules as an advanced JavaScript programming topic.
+    - The `c-b` button next to the second input field replaces the next occurrence of the matched text.
+    - The `ab-ac` button replaces **all** occurrences of the matched text.
+   - The left and right arrows move the cursor to the previous and next match.
+    - To get rid of the pop-up press `Esc` or press the `x` button.
 
 - **Rename Symbol**. This command renames all occurrences of a JavaScript variable or function name. To do so, move the text cursor to the variable or function name and press F2. A small pop-up window will appear in which you can type a new name. Press Enter to finalise the change or Esc to cancel it.
 
@@ -137,7 +170,7 @@ If your JavaScript program is contained in a single file the easiest way to run 
 
 2. You will prompted to select an environment. Choose `Node.js` as show below.
 
-	![debug_3](assets/debug-3.png)
+    ![debug_3](assets/node-debug.png)
 
 This starts your program in the VSCode debugger.
 
