@@ -24,7 +24,7 @@ VSCode can be extended with _extensions_. There are three that we recommend you 
 
 3. In the input field in the upper left corner, type `spell checker` as pictured here:
 
-    ![Spell checker extension](assets/spell-checker.PNG)
+    ![Spell checker extension](assets/spell-checker.png)
 
 4. Press the green `install` button of **Code Spellchecker**.
 
