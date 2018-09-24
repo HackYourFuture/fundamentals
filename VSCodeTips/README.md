@@ -68,7 +68,7 @@ We recommend that you apply a couple of changes to the default settings of VSCod
     /// Place your settings in this file to overwrite the default settings
     {
       "editor.detectIndentation": false,
-      "editor.formatOnPaste": false,
+      "editor.formatOnPaste": true,
       "editor.formatOnSave": true,
       "editor.formatOnType": true,
       "editor.tabSize": 2,
