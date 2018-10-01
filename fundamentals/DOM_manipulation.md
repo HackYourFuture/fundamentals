@@ -20,17 +20,21 @@ Now we have stored a *reference* of how that HTML element is accessed through th
 ```js
 x.innerHTML = 'hello';
 ```
+See the result of what this code changes [here](https://jsfiddle.net/supercor/ud5ym96k/3/) and play with it yourself
+
 
 We can also create elements
 ```js
 const a = document.createElement('li');
 x.appendChild(a);
 ```
+See the result of what this code changes [here](https://jsfiddle.net/supercor/ud5ym96k/5/) and play with it yourself
 
 We can set attributes on elements
  ```js
  a.setAttribute('id', 'hackyourfuture');
  ```
+See the result of what this code changes [here](https://jsfiddle.net/supercor/ud5ym96k/8/) and play with it yourself
 
  We can add event listeners to elements:
 
@@ -39,4 +43,5 @@ We can set attributes on elements
     turn('left');
 });
  ```
+ See the result of what this code changes [here:](https://jsfiddle.net/supercor/ud5ym96k/9/) and play with it yourself
 
