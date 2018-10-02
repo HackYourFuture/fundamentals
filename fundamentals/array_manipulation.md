@@ -68,15 +68,106 @@ These  methods are essential.
 - What does this method do to the original array it is used on?
 
 **Adding items**
-- [`.push()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push) Add item to end of array
-- [`.unshift()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/unshift) Add item to beginning of array
+- [`.push()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push) Add item to end of array.
+Example:
+```js
+const animals = ['pigs', 'goats', 'sheep'];
+
+// 1.What is the return value of this method?
+// returns the length of the new array
+console.log(animals.push('cows'));
+// expected output: 4
+
+// 2. What does this method do to the original array it is used on?
+// modifies the original array - adds at the end of the array the given element(s)
+console.log(animals);
+// expected output: Array ["pigs", "goats", "sheep", "cows"]
+
+// can add multiple elements in one call
+animals.push('chickens', 'parrot');
+
+console.log(animals);
+// expected output: Array ["pigs", "goats", "sheep", "cows", "chicken", "parrot"]
+```
+- [`.unshift()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/unshift) Add item to beginning of array.
+Example:
+```js
+const array1 = [1, 2, 3];
+
+// 1.What is the return value of this method?
+// returns the length of the new array
+console.log(array1.unshift(4, 5));
+// expected output: 5
+
+// 2. What does this method do to the original array it is use
+// modifies the original array - adds at the begining of the array the given element(s) 
+console.log(array1);
+// expected output: Array [4, 5, 1, 2, 3]
+```
 
 **Removing items**
-- [`.shift()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push) Remove first element from array
-- [`.pop()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/pop) Remove last element from array
-- [`.splice()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice) Remove a specific element from array using index
+- [`.shift()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push) Remove first element from array.
+Example:
+```js
+const array1 = [1, 2, 3];
+
+const firstElement = array1.shift();
+
+// 1.What is the return value of this method?
+// returns the first element of the array
+console.log(firstElement);
+// expected output: 1
+
+// 2. What does this method do to the original array it is use
+// modifies the initial array - removes the first element
+console.log(array1);
+// expected output: Array [2, 3]
+```
+- [`.pop()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/pop) Remove last element from array. Example:
+```js
+const plants = ['broccoli', 'cauliflower', 'cabbage', 'kale', 'tomato'];
+
+// 1.What is the return value of this method?
+// returns the last element
+console.log(plants.pop());
+// expected output: "tomato"
+
+// 2. What does this method do to the original array it is use
+// modifies the original array - removes the last element from the end of the array
+console.log(plants);
+// expected output: Array ["broccoli", "cauliflower", "cabbage", "kale"]
+
+plants.pop();
+
+console.log(plants);
+// expected output: Array ["broccoli", "cauliflower", "cabbage"]
+```
+
+- [`.splice()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice) Remove a specific element from array using index.
+Example:
+```js
+var months = ['Jan', 'March', 'April', 'June'];
+
+// 1.What is the return value of this method?
+// return an array containing the elements removed
+console.log(months.splice(1, 0, 'Feb'));
+
+// 2. What does this method do to the original array it is use
+// modifies the original array:
+
+// inserts at 1st index position
+console.log(months);
+// expected output: Array ['Jan', 'Feb', 'March', 'April', 'June']
+
+console.log(months.splice(4, 1, 'May'));
+// replaces 1 element at 4th index
+console.log(months);
+// expected output: Array ['Jan', 'Feb', 'March', 'April', 'May']
+```
 
 **Useful iterators over arrays**
 - [`.map()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map)  creates a new array with the results of calling a provided function on every element in the calling array.
 - [`.filter()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter) creates a new array with all elements that pass the test implemented by the provided function.
 - [`.sort()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort) sorts the elements of an array in place and returns the array
+
+Detailed examples: [`here`](https://github.com/HackYourFuture/fundamentals/blob/master/fundamentals/map_filter.md)
