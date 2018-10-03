@@ -1,47 +1,94 @@
-# Basic DOM manipulations
+# Basic DOM manipulation
 
-Using JavaScript we can access and manipulate the Document Object Model (DOM). We access the DOM through a global object called `document`.
+The Document Object Model (DOM) is a construct through which web browsers make the HTML structure of a web page (= 'document') available to JavaScript files loaded into that page. We can access the DOM through a global object called `document`.
 
-HTML
+Consider this HTML:
+
 ```html
 <body>
-  <div id="hello"></div>
+  <div id="root"></div>
 </body>
 ```
 
-A common method to access the DOM is by giving a HTML element an ID, and then using the `document` method `getElementById()`
+A common method to access an HTML element through the DOM is by giving it an ID, and then using the `document` method `getElementById()`.
 
 ```js
-const x = document.getElementById('hello');
+const rootDiv = document.getElementById('root');
 ```
 
-Now we have stored a *reference* of how that HTML element is accessed through the DOM object. We can use this to manipulate the element.
+Now, we have a *reference* to the HTML element in our JavaScript code. We can, for instance, set the text content through the `innerText` property.
 
 ```js
-x.innerHTML = 'hello';
+rootDiv.innerText = 'Hello, world!';
 ```
-See the result of what this code changes [here](https://jsfiddle.net/supercor/ud5ym96k/3/) and play with it yourself
 
+As a result, the HTML structure now looks like this:
 
-We can also create elements
+```html
+<body>
+  <div id="root">Hello, world!</div>
+</body>
+```
+
+> See the result of what this code changes in this [CodePen](https://codepen.io/remarcmij/pen/VEerRP) and play with it yourself.
+
+_Note that we are not modifying the HTML file (e.g., `index.html`) itself. We are just modifying an in-memory representation of the HTML as was initially loaded through the HTML file._
+
+We can also create elements:
+
 ```js
-const a = document.createElement('li');
-x.appendChild(a);
+// Create a button element and label it Click Me!
+const myButton = document.createElement('button');
+myButton.innerText = 'Click Me!';
 ```
-See the result of what this code changes [here](https://jsfiddle.net/supercor/ud5ym96k/5/) and play with it yourself
 
-We can set attributes on elements
- ```js
- a.setAttribute('id', 'hackyourfuture');
- ```
-See the result of what this code changes [here](https://jsfiddle.net/supercor/ud5ym96k/8/) and play with it yourself
+This creates a button element and sets its label (i.e. `innerText`), but this in itself is not enough. At this point the button is created but not yet added to the DOM: it is still somewhere "hanging up in the air". We need to attach it to some parent element that is already part of the DOM. This is done by calling `appendChild()` on that parent element, passing it a reference to the newly created element.
 
- We can add event listeners to elements:
+```js
+rootDiv.appendChild(myButton);
+```
 
- ```js
- turnLeftButton.addEventListener('click', function () {
-    turn('left');
+As a result, the HTML structure now looks like this:
+
+```html
+<body>
+  <div id="root">
+    <button>Click Me!</button>
+  </div>
+</body>
+```
+
+> See the result of what this code changes in this [CodePen](https://codepen.io/remarcmij/pen/bmEaVm) and play with it yourself.
+
+We can set attributes on elements:
+
+```js
+myButton.setAttribute('class', 'my-button');
+```
+
+Resulting HTML:
+
+```html
+<body>
+  <div id="root">
+    <button class="my-button">Click Me!</button>
+  </div>
+</body>
+```
+
+> See the result of what this code changes in this [CodePen](https://codepen.io/remarcmij/pen/wYMmpP) and play with it yourself.
+
+We can add event listeners to elements to respond to user interaction. In this example we are adding an event listener to the button that responds to the `click` event. This event is triggered whenever the user clicks on the button. 
+
+```js
+ myButton.addEventListener('click', function () {
+  const para = document.createElement('p');
+  para.innerText = 'You clicked me!';
+  rootDiv.appendChild(para);
 });
- ```
- See the result of what this code changes [here:](https://jsfiddle.net/supercor/ud5ym96k/9/) and play with it yourself
+```
+
+Adding an event listener does not change the HTML structure. However the event listener may cause changes to the DOM (as is illustrated in the above example) when the event is triggered.
+
+> See the result of what this code changes in this [CodePen](https://codepen.io/remarcmij/pen/MPKVEP) and play with it yourself.
 
