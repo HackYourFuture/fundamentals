@@ -88,6 +88,15 @@ We recommend that you apply a couple of changes to the default settings of VSCod
 
 6. Close the Settings tabs.
 
+## Configuring the Default Shell (Windows users only)
+
+By default, a VSCode installation on Window uses **PowerShell** for the Integrated Terminal. To change this to **Git Bash**, follow these steps:
+
+1. Press the key combination **Ctrl-Shift-p** to open the VSCode Command Pallette.
+2. Type the words: `select default`
+3. From the drop-down menu, select **Terminal: Select Default Shell**
+4. A new drop-down menu will appear. From this menu, select **Git Bash**.
+
 ## Using VSCode for your homework
 
 You’ll get the most out of VSCode if you organise your work in folders, say a folder for each week in the JavaScript module.
