@@ -14,6 +14,8 @@ VSCode can be extended with _extensions_. There are three that we recommend you 
 
 3. **Prettier - Code formatter**. Prettier is an code formatter that enforces a consistent style by parsing your code and re-printing it with its own rules that take the maximum line length into account, wrapping code when necessary.
 
+   > If you have any other code formatter extensions installed, e.g., **Beautify**, be sure to remove them as they may conflict with **Prettier**.
+   
 4. **open in browser**. This extension is handy during the HYF JavaScript lessons. It allows you to quickly open an HTML file in the browser directly from VSCode.
 
 5. **Live Server**. Launch a development local Server with live reload feature for static & dynamic pages.
