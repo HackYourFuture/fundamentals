@@ -77,10 +77,12 @@ We recommend that you apply a couple of changes to the default settings of VSCod
    {
      "editor.detectIndentation": false,
      "editor.formatOnSave": true,
-     "editor.formatOnType": true,
      "editor.minimap.enabled": false,
      "editor.renderIndentGuides": true,
      "editor.tabSize": 2,
+     "editor.codeActionsOnSave": {
+       "source.fixAll": true
+     },
      "files.autoSave": "onFocusChange",
      "prettier.printWidth": 100,
      "prettier.singleQuote": true,
