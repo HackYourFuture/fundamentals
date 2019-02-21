@@ -83,6 +83,7 @@ We recommend that you apply a couple of changes to the default settings of VSCod
      "editor.codeActionsOnSave": {
        "source.fixAll": true
      },
+     "eslint.autoFixOnSave": true,
      "files.autoSave": "onFocusChange",
      "prettier.printWidth": 100,
      "prettier.singleQuote": true,
