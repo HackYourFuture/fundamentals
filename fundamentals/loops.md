@@ -6,8 +6,18 @@ We will use the array of month names given below to illustrate the various types
 
 ```js
 const months = [
-  'January', 'February', 'March', 'April', 'May', 'June',
-  'July', 'August', 'September', 'October', 'November', 'December'
+  'January',
+  'February',
+  'March',
+  'April',
+  'May',
+  'June',
+  'July',
+  'August',
+  'September',
+  'October',
+  'November',
+  'December',
 ];
 ```
 
@@ -81,6 +91,8 @@ do  {
 
 We recommend that you do not use the `do...while` loop, exactly for the reason that the loop body is executed at least once without taking the loop condition into account. It is always possible to rewrite a `do...while` loop into a regular `while` loop that strictly meets the two preconditions mentioned earlier.
 
+![image](assets/do-while.png)
+
 More info on MDN: [do...while](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/do...while)
 
 ## for
@@ -88,8 +100,8 @@ More info on MDN: [do...while](https://developer.mozilla.org/en-US/docs/Web/Java
 The `for` loop is the most used loop construct that you will come across and that you are likely to use most in your own code. It exists in a number of variations in JavaScript that we will cover one by one below. The syntax of the most generic form is as follows:
 
 ```js
-for ([initialization]; [condition]; [final-expression]) {
- // statement block to be repeated
+for ([initialization]; [condition]; [final - expression]) {
+  // statement block to be repeated
 }
 ```
 
@@ -120,9 +132,10 @@ This form of the `for` loop is roughly equivalent<sup>1</sup> to the following:
 //          ↑A            ↑B          ↑C
 
 let index = 0; // ← A
-while (index < len) {  // ← B
+while (index < len) {
+  // ← B
   console.log(months[index]);
-  index++;  // ← C
+  index++; // ← C
 }
 ```
 
@@ -167,17 +180,17 @@ We will discuss the `for...in` variant in more detail the part of the curriculum
 ```js
 const obj = {
   a: 10,
-  b: 'test'
-}
+  b: 'test',
+};
 
 // for...in
 for (const key in obj) {
-  console.log(obj[key])
+  console.log(obj[key]);
 }
 
 // equivalent for...of
 for (const key of Object.keys(obj)) {
-  console.log(obj[key])
+  console.log(obj[key]);
 }
 ```
 
