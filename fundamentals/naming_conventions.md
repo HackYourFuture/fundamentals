@@ -15,7 +15,7 @@ In practice your code may need to be maintained by others, as you move on to oth
 
 The consumer least interested in the names you choose is the runtime environment (i.e. the JavaScript engine in your browser or Node). The runtime environment does not mind meaningless, one-letter variable names. In fact, a process called 'minification' is sometimes used to create a minified version of your JavaScript code for running in the browser, the purpose of which is to speed up fetching your code over the Internet.
 
-## camelCase vs PascalCase vs snake_case
+## camelCase vs PascalCase vs snake_case vs kebab-case
 
 These terms are used to describe the conventions for the spelling of multi-word variable (and function) names.
 
@@ -49,6 +49,13 @@ This casing is not generally used in JavaScript except for naming global constan
 const MAX_AGE = 60;
 ```
 
+### kebab-case
+
+This casing is sometimes used for filenames in JavaScript.
+
+```js
+const fileName = 'movie-collection.js';
+```
 
 ## Variable names for data
 
