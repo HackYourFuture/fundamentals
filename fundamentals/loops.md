@@ -195,3 +195,7 @@ for (const key of Object.keys(obj)) {
 ```
 
 More info on MDN: [for...in](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...in)
+
+## Array.forEach()
+
+The `.forEach()` array method can be used to iterate over all the elements of an array in functional away. This is explained in detail in the fundamental on array methods: [Array.forEach()](https://github.com/HackYourFuture/fundamentals/blob/master/fundamentals/map_filter.md#arrayforeach). Many programmers prefer this functional way over traditional loops when working with arrays.
