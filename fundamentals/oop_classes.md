@@ -214,7 +214,8 @@ months
 ```
 
 
-![prototype](assets/prototype.png)
+![prototypes-fundamental](assets/prototypes-fundamental.png)
+Figure 1: All objects instantiated with the Model constructor function share a common prototype.
 
 ### Prototype vs \_\_prototype\_\_
 
@@ -226,7 +227,7 @@ In contrast to `prototype`, the `__proto__` property (in documentation sometimes
 
 The prototype object itself also has a `__proto__` property. In most cases this property points to the prototype of the standard JavaScript `Object` prototype. This is because, ultimately, all objects in JavaScript are prototype-linked to the `Object` prototype. In OOP terms one would say that all JavaScript objects ultimately derive from `Object`.
 
-The `__proto__` property of the `Object` prototype itself has the value `null`. This signals the end of the prototype chain.
+There is no `__proto__` property on the `Object` prototype itself. This is where the prototype chain ends.
 
 When you call a method on an object that does not exist on the object itself, the JavaScript engine will 'walk' down the prototype chain until it finds the requested method _or_ until it reaches the end of the chain.
 
