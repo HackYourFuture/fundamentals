@@ -49,28 +49,26 @@ VSCode can be extended with _extensions_. There are three that we recommend you 
 8. A terminal window opens in the lower half of the VSCode window. In this window, type the command below (on Linux and MacOS systems you may need to prefix this command with `sudo`, e.g. `sudo npm ...`):
 
    ```
-   npm install -g eslint-cli
+   npm install -g eslint
    ```
 
 ## Customise VSCode Settings
 
 We recommend that you apply a couple of changes to the default settings of VSCode to help you create well-formatted JavaScript code. Follow these steps:
 
-1. Press the cog-wheel icon in the lower-left corner of the VSCode screen, as indicated here:
+1. Press the function key F1 and type the following in the text box:
 
-   ![settings-btn](assets/settings.png)
+    ```
+    open settings
+    ```
 
-   > If you see a blue encircled number, e.g. 1, on this button this means that you have an outstanding VSCode update awaiting to be installed. VSCode currently has a monthly update cycle. It is best to install updates at your earliest convenience.
+    A menu will appear with matching menu options:
 
-2. From the menu, select **Settings**.
+   ![settings-panel](assets/settings-panel.png)
 
-3. From the settings panel, with the **User Settings** tab highlighted, click on the `{ }` button, as indicated by the red triangle in the figure below.
+2. Select **Preferences Open Settings (JSON)** from the list
 
-   ![settings=panel](assets/settings-panel.png)
-
-4. From the resulting menu, select **Open settings.json**.
-
-5. Copy the content shown below and paste it over (i.e. replace) the existing content in the `USER SETTINGS` panel in the right-hand half of the screen.
+5. Copy the content shown below and paste it over (i.e. replace) the existing content.
 
    ```json
    /// Place your settings in this file to overwrite the default settings
@@ -85,7 +83,6 @@ We recommend that you apply a couple of changes to the default settings of VSCod
      },
      "eslint.autoFixOnSave": true,
      "files.autoSave": "onFocusChange",
-     "prettier.printWidth": 100,
      "prettier.singleQuote": true,
      "prettier.trailingComma": "all"
    }
