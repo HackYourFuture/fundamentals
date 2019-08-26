@@ -18,7 +18,7 @@ Starting with  the JavaScript2 module we expect you to hand in homework by using
 
 For each week's homework repeat the following steps.
 
-1. If there our any outstanding changes from the previous week, either commit or discard them.
+1. If there are any outstanding changes from the previous week, either commit or discard them.
 
 2. Start afresh by resetting your local repository back to the `master` branch. This ensures that the new homework is not mixed up with the homework of previous weeks. (That previous homework will still be available in their respective branches.) Use this command:
 
