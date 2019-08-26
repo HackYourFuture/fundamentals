@@ -14,7 +14,7 @@ Single line comments at end of the line:
 const x = 5;      // Declare x, give it the value of 5
 ```
 
-Coding **well** in JavaScript: [JSDoc](http://usejsdoc.org/)
+Coding **well** in JavaScript: [JSDoc](https://jsdoc.app/)
 
 ## HTML
 [W3Schools](https://www.w3schools.com/html/html_comments.asp)
