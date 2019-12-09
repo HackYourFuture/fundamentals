@@ -34,12 +34,14 @@ Do you think there is one (or more) missing? Make a PR with your additions 🙃!
 
 `^` Caret or circumflex `^`
 
-`|` Vertical bar `|`
+`|` Vertical bar or pipe `|`
 
 `~` Tilde `~`
 
 `#` Hash or number sign `#`
 
 `_` Underscore `_`
+
+`-` Dash `-`
 
 See also the fundamentals page on [Operators](operators.md).
