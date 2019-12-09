@@ -51,11 +51,24 @@ const MAX_AGE = 60;
 
 ### kebab-case
 
-This casing is sometimes used for filenames in JavaScript.
+This casing is used for class names in css and sometimes for filenames in JavaScript.
+
+
+
+```css
+.page-title { 
+  color: #ff23be.
+}
+```
+
+```html
+<h1 class="page-title">Beautiful Title</h1>
+```
 
 ```js
 const fileName = 'movie-collection.js';
 ```
+
 
 ## Variable names for data
 
