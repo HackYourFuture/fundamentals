@@ -20,8 +20,6 @@ VSCode can be extended with _extensions_. There are three that we recommend you 
 
 5. **Live Server**. Launch a development local Server with live reload feature for static & dynamic pages.
 
-6) **Bracket Pair Colorizer**. An extension for colorizing matching brackets.
-
 ### Installation instructions
 
 1. Start up VSCode.
@@ -73,6 +71,7 @@ We recommend that you apply a couple of changes to the default settings of VSCod
    ```json
    /// Place your settings in this file to overwrite the default settings
    {
+     "editor.bracketPairColorization.enabled": true,
      "editor.detectIndentation": false,
      "editor.formatOnSave": true,
      "editor.minimap.enabled": false,
