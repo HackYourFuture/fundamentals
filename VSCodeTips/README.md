@@ -40,7 +40,6 @@ VSCode can be extended with _extensions_. There are three that we recommend you 
    - Prettier - Code formatter
    - open in browser
    - Live Server
-   - Bracket Pair Colorizer
 
 6. When the final extension has finished installing you will notice that the green `install` button changes to a blue `reload` button. Press this button to reload VSCode and activate the newly installed extensions.
 7. You now need to install a global Node package to support ESLint. Open a terminal window in VSCode by selecting **View**, **Integrated Terminal** from the menu bar.
