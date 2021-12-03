@@ -44,4 +44,6 @@ Do you think there is one (or more) missing? Make a PR with your additions 🙃!
 
 `-` Dash `-`
 
+`!` Exclamation mark or logical NOT `!`
+
 See also the fundamentals page on [Operators](operators.md).
