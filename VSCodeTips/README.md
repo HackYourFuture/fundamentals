@@ -6,7 +6,7 @@ Download and install the appropriate version of VSCode for your operating system
 
 ## Some useful extensions
 
-VSCode can be extended with _extensions_. There are three that we recommend you install from day 1.
+VSCode can be extended with _extensions_. There are four that we recommend you install from day 1.
 
 1. **Code Spell Checker**. We fully understand that you guys sometimes have difficulty with the correct English spelling when choosing names for variables and functions in your JavaScript programs. That is nothing to be ashamed of, but why not get some help from a handy extension?
 
@@ -15,10 +15,8 @@ VSCode can be extended with _extensions_. There are three that we recommend you 
 3. **Prettier - Code formatter**. Prettier is an code formatter that enforces a consistent style by parsing your code and re-printing it with its own rules that take the maximum line length into account, wrapping code when necessary.
 
    > If you have any other code formatter extensions installed, e.g., **Beautify**, be sure to remove them as they may conflict with **Prettier**.
-   
-4. **open in browser**. This extension is handy during the HYF JavaScript lessons. It allows you to quickly open an HTML file in the browser directly from VSCode.
 
-5. **Live Server**. Launch a development local Server with live reload feature for static & dynamic pages.
+4. **Live Server**. Launch a development local Server with live reload feature for static & dynamic pages.
 
 ### Installation instructions
 
@@ -38,7 +36,6 @@ VSCode can be extended with _extensions_. There are three that we recommend you 
 
    - ESLint
    - Prettier - Code formatter
-   - open in browser
    - Live Server
 
 6. When the final extension has finished installing you will notice that the green `install` button changes to a blue `reload` button. Press this button to reload VSCode and activate the newly installed extensions.
