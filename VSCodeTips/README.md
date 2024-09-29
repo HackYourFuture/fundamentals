@@ -6,7 +6,11 @@ Download and install the appropriate version of VSCode for your operating system
 
 ## Some useful extensions
 
-VSCode can be extended with _extensions_. There are three that we recommend you install from day 1.
+VSCode can be extended with _extensions_.
+
+> There are many extensions available that you could possibly install. Browsing through the long list of the VSCode Extensions Marketplace might make you feel like a child in a candy store, with all this free stuff ready for the taking. However, we urge you to resist the temptation and just install the extensions recommended below. Other extensions may interfere with the essential ones recommended here. Once you gain more experience you may choose to install additional ones, but in all cases you should only do so when you have an immediate, identifiable use case for each one.  
+
+There are four extension that we recommend you install from day 1.
 
 1. **Code Spell Checker**. We fully understand that you guys sometimes have difficulty with the correct English spelling when choosing names for variables and functions in your JavaScript programs. That is nothing to be ashamed of, but why not get some help from a handy extension?
 
@@ -15,12 +19,10 @@ VSCode can be extended with _extensions_. There are three that we recommend you 
 3. **Prettier - Code formatter**. Prettier is an code formatter that enforces a consistent style by parsing your code and re-printing it with its own rules that take the maximum line length into account, wrapping code when necessary.
 
    > If you have any other code formatter extensions installed, e.g., **Beautify**, be sure to remove them as they may conflict with **Prettier**.
-   
-4. **open in browser**. This extension is handy during the HYF JavaScript lessons. It allows you to quickly open an HTML file in the browser directly from VSCode.
 
-5. **Live Server**. Launch a development local Server with live reload feature for static & dynamic pages.
+4. **Live Server**. Launch a development local Server with live reload feature for static & dynamic pages.
 
-### Installation instructions
+### VSCode Setup Instructions
 
 1. Start up VSCode.
 
@@ -28,24 +30,23 @@ VSCode can be extended with _extensions_. There are three that we recommend you 
 
    ![Extensions Icon](assets/extensions-icon.png)
 
-3. In the input field in the upper left corner, type `code spell checker` as pictured here:
+3. In the input field in the upper left corner, type `spell checker` as pictured here:
 
    ![Spell checker extension](assets/spell-checker.png)
 
-4. Press the green `install` button of **Code Spellchecker**.
+4. Press the `Install` button of **Code Spell Checker**.
 
 5. Install the remaining extensions by repeating steps 3 and 4, by typing the names of the extensions:
 
-   - ESLint
-   - Prettier - Code formatter
-   - open in browser
-   - Live Server
+   - **ESLint**
+   - **Prettier - Code formatter**
+   - **Live Server**
 
-6. When the final extension has finished installing you will notice that the green `install` button changes to a blue `reload` button. Press this button to reload VSCode and activate the newly installed extensions.
-7. You now need to install a global Node package to support ESLint. Open a terminal window in VSCode by selecting **View**, **Integrated Terminal** from the menu bar.
-8. A terminal window opens in the lower half of the VSCode window. In this window, type the command below (on Linux and MacOS systems you may need to prefix this command with `sudo`, e.g. `sudo npm ...`):
+6. You now need to install a global Node package to support ESLint. Open a terminal window in VSCode by selecting **View**, **Integrated Terminal** from the menu bar.
 
-   ```
+7. A terminal window opens in the lower half of the VSCode window. In this window, type the command below (on Linux and MacOS systems you may need to prefix this command with `sudo`, e.g. `sudo npm ...`):
+
+   ```text
    npm install -g eslint
    ```
 
@@ -53,9 +54,9 @@ VSCode can be extended with _extensions_. There are three that we recommend you 
 
 We recommend that you apply a couple of changes to the default settings of VSCode to help you create well-formatted JavaScript code. Follow these steps:
 
-1. Press the function key F1 and type the following in the text box:
+1. Press the function key <kbd>F1</kbd> and type the following in the text box:
 
-    ```
+    ```text
     open settings
     ```
 
@@ -63,90 +64,107 @@ We recommend that you apply a couple of changes to the default settings of VSCod
 
    ![settings-panel](assets/settings-panel.png)
 
-2. Select **Preferences Open Settings (JSON)** from the list
+2. Select **Preferences: Open User Settings (JSON)** from the list
 
-5. Copy the content shown below and paste it over (i.e. replace) the existing content.
+3. Copy the content shown below and paste it over (i.e. replace) the existing content.
 
-   ```json
-   /// Place your settings in this file to overwrite the default settings
-   {
-     "editor.bracketPairColorization.enabled": true,
-     "editor.detectIndentation": false,
-     "editor.formatOnSave": true,
-     "editor.minimap.enabled": false,
-     "editor.renderIndentGuides": true,
-     "editor.tabSize": 2,
-     "editor.codeActionsOnSave": {
-       "source.fixAll": true
-     },
-     "eslint.autoFixOnSave": true,
-     "files.autoSave": "onFocusChange",
-     "prettier.singleQuote": true,
-     "prettier.trailingComma": "all"
-   }
-   ```
+    ```json
+    /// Place your settings in this file to overwrite the default settings
+    {
+      "editor.detectIndentation": false,
+      "editor.formatOnSave": true,
+      "editor.minimap.enabled": false,
+      "editor.tabSize": 2,
+      "editor.codeActionsOnSave": {
+        "source.fixAll": "explicit"
+      },
+      "files.autoSave": "onFocusChange",
+      "prettier.trailingComma": "es5",
+      "editor.defaultFormatter": "esbenp.prettier-vscode",
+      "[javascript]": {
+        // override possible JavaScript specific user setting
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+      },
+      "editor.bracketPairColorization.enabled": true,
+      "editor.guides.bracketPairs": true,
+      "editor.guides.highlightActiveIndentation": true,
+      "editor.guides.bracketPairsHorizontal": "active"
+    }
+    ```
 
-6. Close the Settings tabs.
+4. Close the Settings tabs.
 
 ## Configuring the Default Shell (Windows users only)
 
 By default, a VSCode installation on Window uses **PowerShell** for the Integrated Terminal. To change this to **Git Bash**, follow these steps:
 
-1. Press the key combination **Ctrl-Shift-p** to open the VSCode Command Pallette.
+1. Press the key combination <kbd>F1</kbd> to open the VSCode Command Pallette.
 2. Type the words: `select default`
-3. From the drop-down menu, select **Terminal: Select Default Shell**
+3. From the drop-down menu, select **Terminal: Select Default Profile**
 4. A new drop-down menu will appear. From this menu, select **Git Bash**.
 
-## Using VSCode for your homework
+## Using VSCode
 
-You’ll get the most out of VSCode if you organise your work in folders, say a folder for each week in the JavaScript module.
+You’ll get the most out of VSCode if you organise your work in **project folders**.
 
-(Later in the course you will be “cloning” Git repositories into local folders as the basis for your homework or projects.)
+Later in the course you will be “cloning” Git repositories into local folders as the basis for your homework or projects. But for now, if you do not yet have a project folder you should create one first.
 
-To start work with VSCode in particular folder, start VSCode and open the relevant folder: from the menu, select **File**, **Open Folder**. VSCode will now open this folder to be your "project folder", until you close VSCode or open another folder.
+A nice way to organise your project folders is to create a parent folder where you will keep all project folders. For instance, you could create a `hackyourfuture` folder in your home directory to serve as the parent directory. Then, inside that parent directory, create a project folder, say `my-first-project`.
 
-> Make it a habit in VSCode to always open the **folder** that contains the project you are working on, rather than individual files in that folder.
+> Note: Do not use spaces in file and folder names. Names with spaces often require special treatment ("quoting") when referring to them in the command line and this is best avoided.
 
-In the figure below the folder named `JavaScript2` was opened in VSCode. The directory tree for that folder in shown in the **Explorer** panel. The folder name `JAVASCRIPT2` is displayed in uppercase in the title bar of the directory tree panel.
+Once you have created the project folder you have two options to open VSCode. If you are on the command line you can `cd` to your project folder and type the command:
+
+```text
+code .
+```
+
+Alternatively, you can first open VSCode application and then use the **Open Folder** button or the **File, Open Folder...** menu command to open the project folder.
 
 ![Open folder in VSCode](./assets/open-folder.png)
 
-## Creating your JavaScript file
+> Make it a habit in VSCode to always open the main folder that contains the project you are working on, rather than individual files or subfolders inside that folder.
 
-You are now ready to start adding your first JavaScript file.
+In the figure below the folder named `my-first-project` was opened in VSCode. The directory tree (still empty) for that folder in shown in the **Explorer** panel. The folder name `MY-FIRST-PROJECT` is displayed in uppercase in the title bar of the directory tree panel.
 
-1. Open the folder where you will keep your working files, for instance `hyf-javascript1`.
-2. Right-click in an empty space in the `EXPLORER` window and select **New File** from the context menu. You will see the following:
+![New folder in VSCode](./assets/empty-project-folder.png)
 
-   ![New file](./assets/new-file.png)
+## Creating a new HTML file
 
-3. Type a file name in the edit box, e.g. `app.js` and press **Enter**. This will add a file `apps.js` to your working folder and open an editor tab for the newly created file.
+You are now ready to start adding your first HTML file.
 
-   ![Edit file](./assets/edit-file.png)
+1. Open the folder where you will keep your working files, for instance `my-first-project`.
 
-5) Start typing your JavaScript code in the new file.
+2. Right-click in an empty space in the `EXPLORER` window and select **New File** from the context menu, or alternatively, click on the `New File...` button as shown in the screen animation below. Then, type the name of the file, `index.html` and press <kbd>Enter</kbd>.
 
-   ![Hello world](./assets/hello-world.png)
+   ![create-html](./assets/create-html.gif)
 
-6) You can also create subfolders in `EXPLORER` panel. Right-click in an empty space in the `EXPLORER` window and select **New Folder** from the context menu, for instance `week1`.
+   As can be seen in the animation, you can quickly create a skeleton HTML file by typing an exclamation mark followed by pressing the <kbd>Tab</kbd> key.
 
-   ![New folder](./assets/new-folder.png)
+3. To complete the files for your first project, create an `index.js` to contain your JavaScript code. A simple file with rudimentary DOM manipulation might look like this:
 
-7) To create a new file in the subfolder, right-click on the subfolder and type a file name in the input box.
+    ![index-js](./assets/index-js.png)
 
-   ![New file in subfolder](./assets/new-file-in-folder.png)
+4. To try it out in a browser, right click on the `index.html` file in the `EXPLORER` window and select the **Open with Live Server** menu option.
 
-8) Be on the watch out for coloured wavy underlines in your code. These are warnings from either ESLint or the Spell Checker that something might be wrong. If you see such wavy underlines, hover your mouse pointer over the underlined text and a tooltip will appear that explains what might be wrong.
-9) You can also open the "problem" panel by selecting **View**, **Problems** from the menu to see any problems identified.
-10) Pay attention also to the lower left part of the VSCode window, i.e. the status bar. It gives an indication of the number of errors and warnings issued. In the picture below there are zero errors, 7 warnings (usually from ESLint) and 14 informational messages (usually from the spell checker).
+Notes:
 
-    ![Figure 4. Error, warning and message indicators](assets/status-bar.png)
+- Be on the watch out for coloured squiggly underlines in your code. These are warnings from either **ESLint** or the **Spell Checker** that something might be wrong. If you see such squiggly underlines, hover your mouse pointer over the underlined text and a tooltip will appear that explains what might be wrong.
 
-## Some useful short-cut commands
+- You can also open the `PROBLEM` panel by selecting **View**, **Problems** from the menu to inspect the reported problems, if any.
+
+- The left-hand part of the VSCode status bar gives an indication of the number of errors and warnings issued.
+
+    | Symbol | Meaning  |
+    |:------:|----------|
+    | ⨂ _n_ | Number of errors |
+    | ⚠ _n_ | Number of warnings |
+
+## Some Useful Shortcut Commands
 
 In the previous section we frequently referred you to the menu bar to select commands. As you get more proficient with VSCode you may want to inspect these menus a little closer and take note of the short-cut commands listed in their right margin. For example, the short-cut command for **File**, **New** is listed as Ctrl+N (press `Ctrl` and `N` keys simultaneously) on a Windows or Linux PC and ⌘N on a Mac.
 
-Here are some short-cut commands that you will use many times a day and that we recommend you familiarise yourself with from day 1:
+Here are some shortcut commands that you will use many times a day and that we recommend you familiarise yourself with from day 1:
 
 | Operation                                                        | Windows     | Mac | Linux        |
 | ---------------------------------------------------------------- | ----------- | --- | ------------ |
@@ -168,32 +186,18 @@ Here are some short-cut commands that you will use many times a day and that we 
   ![Figure 5. Search and Replace](assets/search-and-replace.png)
 
   - The `Aa` button activates the **Match Case** option.
-  - The `Ab|` button matches **Whole Words Only**.
+  - The <u>`ab`</u> button matches **Whole Words Only**.
   - The `.*` button allow you to search using _regular expressions_, which you may encounter in later modules as an advanced JavaScript programming topic.
-  - The `c-b` button next to the second input field replaces the next occurrence of the matched text.
-  - The `ab-ac` button replaces **all** occurrences of the matched text.
-  - The left and right arrows move the cursor to the previous and next match.
+  - The `b-C` button next to the second input field replaces the next occurrence of the matched text.
+  - The adjacent `ab-BC` button replaces **all** occurrences of the matched text.
+  - The up and down arrows move the cursor to the previous and next match.
   - To get rid of the pop-up press `Esc` or press the `x` button.
 
 - **Rename Symbol**. This command renames all occurrences of a JavaScript variable or function name. To do so, move the text cursor to the variable or function name and press F2. A small pop-up window will appear in which you can type a new name. Press Enter to finalise the change or Esc to cancel it.
 
 - **Open an Integrated Terminal window**. We already covered this when we mentioned the **View**, **Integrated Terminal** menu command.
 
-## Running and debugging your code with the VSCode Node debugger
-
-If your JavaScript program is contained in a single file the easiest way to run and examine your code is the start straight in VSCode.
-
-1. Press the F5 function key to start the VSCode debugger.
-
-2. You will prompted to select an environment. Choose `Node.js` as show below.
-
-   ![debug_3](assets/node-debug.png)
-
-This starts your program in the VSCode debugger.
-
-### Placing break points and inspecting variables
-
-This is covered in class.
+>For a complete list of VSCode keyboard shortcuts, select the **Help, Keyboard Shortcuts Reference** command from the VSCode menu. This will take you to an online PDF file with keyboard shortcuts specifically for your computer platform type.
 
 ### Further information
 
