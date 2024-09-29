@@ -160,11 +160,11 @@ Notes:
     | ⨂ _n_ | Number of errors |
     | ⚠ _n_ | Number of warnings |
 
-## Some Useful Short-Cut Commands
+## Some Useful Shortcut Commands
 
 In the previous section we frequently referred you to the menu bar to select commands. As you get more proficient with VSCode you may want to inspect these menus a little closer and take note of the short-cut commands listed in their right margin. For example, the short-cut command for **File**, **New** is listed as Ctrl+N (press `Ctrl` and `N` keys simultaneously) on a Windows or Linux PC and ⌘N on a Mac.
 
-Here are some short-cut commands that you will use many times a day and that we recommend you familiarise yourself with from day 1:
+Here are some shortcut commands that you will use many times a day and that we recommend you familiarise yourself with from day 1:
 
 | Operation                                                        | Windows     | Mac | Linux        |
 | ---------------------------------------------------------------- | ----------- | --- | ------------ |
@@ -196,6 +196,8 @@ Here are some short-cut commands that you will use many times a day and that we 
 - **Rename Symbol**. This command renames all occurrences of a JavaScript variable or function name. To do so, move the text cursor to the variable or function name and press F2. A small pop-up window will appear in which you can type a new name. Press Enter to finalise the change or Esc to cancel it.
 
 - **Open an Integrated Terminal window**. We already covered this when we mentioned the **View**, **Integrated Terminal** menu command.
+
+>For a complete list of VSCode keyboard shortcuts, select the **Help, Keyboard Shortcuts Reference** command from the VSCode menu. This will take you to an online PDF file with keyboard shortcuts specifically for your computer platform type.
 
 ### Further information
 
